@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Oswald:wght@200..700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taichou Izakaya | About</title>
+    <style>
+
+        @font-face {
+            font-family: 'TitleFont';
+            src: url(https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Oswald:wght@200..700&display=swap);
+        }
+
+        h1 {
+            font-family: 'Nothing You Could Do', sans-serif;
+            font-size: 50px;
+            margin-left: 40%;
+            
+            
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 50px; /* Adjust logo size as needed */
+            height: auto;
+            margin-left: 5%;
+        }
+        nav {
+            margin-left: 800px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+            background-color: #000000;
+            font-size: 15px;
+        }
+
+        nav a, .dropdown {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            padding: 30px;
+        }
+        
+        nav a:hover, .dropdown:hover .dropdown-content {
+            background-color: #ffffff;
+            color:#000000;
+        }
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            padding-top: 20px;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            width: 100%;
+            margin: none;
+        }
+
+        .carousel-container::before,
+        .carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50px; /* Adjust shadow width as needed */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .carousel-container::before {
+            left: 0;
+            transform: skewX(-20deg);
+        }
+
+        .carousel-container::after {
+            right: 0;
+            transform: skewX(20deg);
+        }
+
+        /* Adjust button styles for better visibility */
+        .carousel-control-prev, .carousel-control-next {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(0, 0, 0, 0); /* Gradient shadows on hover */
+            padding: 10px 15px; /* Adjust padding as needed */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(0, 0, 0, 0); /* Gradient shadows on hover */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            color: #fff; /* White arrow color */
+        }
+
+        
+        main {
+            background-image: url('https://i.ibb.co/r4JwLX3/Adobe-Stock-1702265891.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .mainContents {
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            flex: 1;
+            margin-right: 20px;
+            margin-left: 250px;
+        }
+
+        .titleText{
+            font-family: 'Nothing You Could Do', sans-serif;
+            padding-bottom: none;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .descText{
+            margin-left: 50px;
+            font-size: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .image {
+            flex: 1;
+        }
+
+        .HomepagePic{
+            height: auto;
+            width: 50%;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 50px;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            padding-bottom: 150px;
+        }
+
+        .branding{
+            display: flex;
+        }
+
+        .embeddedDiv{
+            text-align: center;
+        }
+
+        .taichouPar{
+            background-color: #000000;
+            
+        }
+
+        .taichouHeadline{
+            text-align: center;
+            margin: 0 auto;
+            color: white;
+            padding-bottom: 1%;
+            padding-top: 1%;
+            font-family: 'Nothing You Could Do', sans-serif;
+            font-size: 50px;
+            text-shadow: 5px 5px 20px #000000;
+            border-bottom: 3px solid white;
+            max-width: 70%;
+        }
+
+        .taichouText{
+            padding-top: 2%;
+            margin: 0 auto;
+            max-width: 50%;
+            color: white;
+            font-size: 18px;
+            padding-bottom: 1%;
+            font-family: "Roboto Condensed", sans-serif;
+            text-shadow: 5px 5px 20px #000000;
+        }
+
+        .taichouImageDiv{
+            text-align: center;
+        }
+
+        .taichouImageDiv img{
+            height: auto;
+            max-width: 60%;
+            padding-bottom: 1.5%;
+        }
+
+        .blackLine{
+            padding:20px;
+            background-color: #000000;
+        }
+
+        .mapSection{
+            display:flex;
+            padding: 1%;
+            background-color: black;
+        }
+
+        .mapText{
+            flex:1;
+            padding-top: 13%;
+        }
+
+        .mapEmbedd{
+            flex:3;
+        }
+        .footerDiv{
+            padding-top: 1%;
+            padding-left: 2%;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <div class="logo">
+                <img src="https://i.ibb.co/T4jMfyn/Taichou-white.png" alt="Taichou-white" border="0">
+            </div>
+            <div>
+                <h1>TAICHOU IZAKAYA</h1>
+            </div>
+        </div>
+        <nav>
+            <a href="Taichou.html">Home</a>
+            <div class="dropdown">
+                <a href="Menu.html">Menu &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Ramen</a>
+                    <a href="#">Side Dishes</a>
+                    <a href="#">Drinks</a>
+                </div>
+            </div>
+            <a href="Reviews.html">Review</a>
+            <a href="#">About us</a>
+        </nav>        
+    </header>
+    <main>
+        <section class="taichouPar">
+            <h2 class="taichouHeadline">Bringing Authentic Japanese Cuisine to Davao</h2>
+            <p class="taichouText">
+                The main mission of our establishment has always been to ensure quality and proper representation of Japanese cuisine. The restaurant is only one of two branches, a small business. But this allows us to ensure the quality and delicate nature of the Japanese cuisine that we serve.
+            </p>
+            <div class="taichouImageDiv">
+                <img src="https://i.ibb.co/pxWKJ3r/A.jpg" alt="A" border="0">
+            </div>
+        </section>
+        <div class="blackLine"></div>
+        <div class="mapSection">
+            <div class="mapText">
+                <h2 class="taichouHeadline">Where we are</h2>
+            </div>
+            <div class="mapEmbedd">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.4724934852306!2d125.61613311100893!3d7.071087416527453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96d9a24a19d13%3A0x7c34b58e169ff6fb!2sTaichou%20Izakaya!5e0!3m2!1sen!2sph!4v1709577620836!5m2!1sen!2sph" width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerDiv">
+            <a href="https://www.facebook.com/taichouizakaya/">
+                <img src="https://i.ibb.co/ts1hnv1/Facebook-Line-White.png" alt="Facebook-Line-White" border="0">
+            </a>
+            <a href="https://instagram.com/taichou.izakaya">
+                <img src="https://i.ibb.co/12VVCqF/Insta-Line-White.png" alt="Insta-Line-White" border="0">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

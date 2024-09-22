@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Oswald:wght@200..700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taichou Izakaya | Menu</title>
+    <style>
+.branding{
+    display: flex;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.websiteTitle {
+    font-family: 'Nothing You Could Do', sans-serif;
+    font-size: 50px;
+    margin-left: 40%;
+    border-bottom: 3px solid white;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    margin-left: 800px;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    z-index: 1;
+}
+
+nav a,
+.dropdown {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    padding: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+}
+
+nav a:hover,
+.dropdown:hover .dropdown-content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    padding-top: 20px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header h1 {
+    font-family: 'Nothing You Could Do', sans-serif;
+    font-size: 50px;
+    margin: 0; /* Remove default margin */
+    text-shadow: 5px 5px 20px #000000;
+}
+
+main {
+    background-image: url('https://i.ibb.co/dJZ1sKL/v1012-bg-013b1.jpg');
+    background-size: contain; /* Change 'cover' to 'contain' */
+    background-position: center;
+}
+
+
+.mainContents {
+    display: flex;
+    align-items: center;
+}
+
+.menuProper {
+    flex: 1;
+    margin-left: 100px;
+}
+
+.menuTitle{
+    padding-left: none;
+    font-size: 35px;
+    font-weight: bold;
+    max-width: 52.3%;
+    text-align: center;
+}
+
+.titleText{
+    border-bottom: 3px solid #ffffff;
+    font-family: 'Nothing You Could Do', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+h1{
+    font-family: 'Nothing You Could Do', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px 20px #000000;
+}
+
+.price{
+    text-align: right;
+    margin-right: 15%;
+    text-shadow: 5px 5px 20px #000000;
+}
+
+.descText{
+    margin-left: 50px;
+    font-size: 20px;
+    max-width: 83%;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    text-shadow: 5px 5px 20px #000000;
+}
+
+.image {
+    flex: 1;
+}
+
+.HomepagePic{
+    height: auto;
+    width: 80%;
+}
+
+.menuIMG {
+    max-width: 85%;
+    height: auto;
+}
+
+.orderSummary{
+    text-align: center;
+    display: flex;
+}
+
+.menuDish{
+    display: flex;
+    align-items: center;
+}
+
+.dishDetails{
+    width: 60%;
+    height: auto;
+}
+
+.quantDiv {
+    text-align: center;
+    display: flex;
+    margin-left: 2%;
+    padding-right: 30%;
+}
+
+.orderQuant{
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 20px #000000;
+}
+
+.quantityButtons{
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    text-shadow: 5px 5px 20px #000000;
+}
+
+.quantityButtons:hover{
+    color: #a8a8a8;
+}
+
+.orderButton {
+    padding: 10px 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    border-radius: 10px;
+}
+
+.orderButton:hover {
+    background-color: #a8a8a8;
+}
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.confirmOrders{
+    margin-top: 80px;
+    text-align: center;
+    border-bottom: 3px solid #000000;
+}
+
+.orderReceipt{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   text-align: center;
+}
+
+.orderBreakdown{
+    list-style-type: none;
+    font-size: 18px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.orReturn {
+    flex:1;
+    position: fixed;
+    top: 0%; /* Adjust the top position as needed */
+    right: 0%; /* Adjust the right position as needed */
+    background-color: white; /* Example background color */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+    background-color: #000000;
+    color: white;
+    padding-top: 23%;
+    padding-bottom: 100%;
+    padding-right: 3%;
+    padding-left: 3%;
+    z-index: 0;
+    margin: 0 auto;
+}
+
+.orderText{
+    font-family: 'Nothing You Could Do', sans-serif;
+    font-size: 35px;
+    border-bottom: 3px solid white;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formItem{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+}
+
+.formFill{
+    font-family: "Roboto Condensed", sans-serif;
+    max-width: 50%;
+}
+
+.formProper{
+    margin-top: 3%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    
+
+}
+.footerDiv{
+            padding-top: 1%;
+            padding-left: 2%;
+            text-align: left;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/T4jMfyn/Taichou-white.png" alt="Taichou-white" border="0">
+        </div>
+        <div>
+            <p class="websiteTitle">TAICHOU IZAKAYA</p>
+        </div>
+        <nav>
+            <a href="Taichou.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Menu &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Ramen</a>
+                    <a href="#">Side Dishes</a>
+                    <a href="#">Drinks</a>
+                </div>
+            </div>
+            <a href="Reviews.html">Review</a>
+            <a href="About.html">About us</a>
+        </nav>        
+    </header>
+    <main>
+        <section class="mainContents">
+            <div class="menuProper">
+                <div class="menuTitle">
+                <p class="titleText" href="RamenDishes">Ramen Dishes</p>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Special Tonkotsu</h1>
+                        <h2 id="price" class="price">335</h2>
+                        <p class="descText">
+                            Tonkotsu pork soup enriched with Raki-Yata special Miso. With regular topping of pork charsiu, miso pork, wood ear mushroom, and spring onions.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/9YqgvZd/275791882-1655570491472893-4190445623062703335-n.jpg" alt="275791882-1655570491472893-4190445623062703335-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement1">-</button>
+                        <span class="orderQuant" id="quantity1">0</span>
+                        <button class="quantityButtons" id="increment1">+</button>
+                    </div>
+                    <div class="orReturn">
+                        <p class="orderText">Order Summary</p>
+                        <ul class="orderBreakdown" id="orderSummaryList"></ul>
+                        <button class="orderButton">Make this booking</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Hell Ramen</h1>
+                        <h2 id="price" class="price">315</h2>
+                        <p class="descText">
+                            Hell Ramen is an amalgam of seriously spicy shoyu broth with asari, ground pork, crispy pork skin, and various chilis.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/Wyc7Pft/425698273-764802979001781-5507237486764466155-n-1.jpg" alt="425698273-764802979001781-5507237486764466155-n-1" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement2">-</button>
+                        <span class="orderQuant" id="quantity2">0</span>
+                        <button class="quantityButtons" id="increment2">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Wagamama</h1>
+                        <h2 id="price" class="price">355</h2>
+                        <p class="descText">
+                            Marinated chicken nestled within ramen noodles bathing in a robust chicken broth infused with dashi and miso, adorned with pea shoots, menma, and a finishing touch of spring onion.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/r31ZHQg/401391427-718080247007388-9101164864192289937-n.jpg" alt="401391427-718080247007388-9101164864192289937-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement3">-</button>
+                        <span class="orderQuant" id="quantity3">0</span>
+                        <button class="quantityButtons" id="increment3">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Shoyu Tonkotsu</h1>
+                        <h2 id="price" class="price">355</h2>
+                        <p class="descText">
+                            A savory version of ramen that is made with pork bones and a soup base made from vegetable stock. The noodle is often thin and creamy.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/TKCBSJG/Tktsu-Resized.jpg" alt="Tktsu-Resized" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement4">-</button>
+                        <span class="orderQuant" id="quantity4">0</span>
+                        <button class="quantityButtons" id="increment4">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Shoyu Shimeji</h1>
+                        <h2 id="price" class="price">375</h2>
+                        <p class="descText">
+                            Description of the dish Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Integer gravida tellus eu sodales consequat. Sed vel felis quis urna gravida placerat.
+                            <div class="image">
+                                <img class="menuIMG"src="https://i.ibb.co/82n5G8s/259061561-1574412959588647-2043860576304354132-n.jpg" alt="259061561-1574412959588647-2043860576304354132-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement5">-</button>
+                        <span class="orderQuant" id="quantity5">0</span>
+                        <button class="quantityButtons" id="increment5">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Shoyu Shiitake</h1>
+                        <h2 id="price" class="price">375</h2>
+                        <p class="descText">
+                            Rich, aromatic roasted chicken broth flavoured with miso and soy with noodles, chicken and shimeji mushrooms makes for the perfect chicken ramen.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/NmZ9K2Y/139394924-1361982387498373-2917818805386433274-n.jpg" alt="139394924-1361982387498373-2917818805386433274-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement6">-</button>
+                        <span class="orderQuant" id="quantity6">0</span>
+                        <button class="quantityButtons" id="increment6">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Tantanmen</h1>
+                        <h2 id="price" class="price">335</h2>
+                        <p class="descText">
+                            A rich and flavorful Japanese ramen noodle soup adapted from the famous Chinese Sichuan dan dan mian. It’s unique for both its savory topping and the spicy yet creamy soup broth.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/2hxJmFP/125784497-1320920074937938-8024545997498313429-n.jpg" alt="125784497-1320920074937938-8024545997498313429-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement7">-</button>
+                        <span class="orderQuant" id="quantity7">0</span>
+                        <button class="quantityButtons" id="increment7">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </section>
+        <section class="mainContents">
+            <div class="menuProper">
+                <div class="menuTitle">
+                <p class="titleText">Side Dishes</p>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Karage</h1>
+                        <h2 id="price" class="price">205</h2>
+                        <p class="descText">
+                            With juicy marinated chicken coated in an ultra-crisp shell, Karage is a staple of Japanese home-cooking and one of the most popular Japanese dishes.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/56mDf55/274880840-1643179242712018-4473935642714318348-n.jpg" alt="274880840-1643179242712018-4473935642714318348-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement8">-</button>
+                        <span class="orderQuant" id="quantity8">0</span>
+                        <button class="quantityButtons" id="increment8">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Okonomiyaki</h1>
+                        <h2 id="price" class="price">185</h2>
+                        <p class="descText">
+                            Okonomiyaki is soothing and filling, hearty with pork and savory with a topping of seaweed and bonito flakes.
+                            <div class="image">
+                                <img class="menuIMG"src="https://i.ibb.co/bFPmy09/273811651-1633969803632962-5372646645167250725-n.jpg" alt="273811651-1633969803632962-5372646645167250725-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement9">-</button>
+                        <span class="orderQuant" id="quantity9">0</span>
+                        <button class="quantityButtons" id="increment9">+</button>
+                    </div>
+                </div>
+                <div class="menuDish">
+                    <div class="dishDetails">
+                        <h1>Gyoza</h1>
+                        <h2 id="price" class="price">205</h2>
+                        <p class="descText">
+                            Gyoza are Japanese pan-fried dumplings that are crisp and golden on the bottom and juicy inside.
+                            <div class="image">
+                                <img class="menuIMG" src="https://i.ibb.co/q7K1k7z/343573361-228898079781202-8256129688707518745-n.jpg" alt="343573361-228898079781202-8256129688707518745-n" border="0">
+                            </div>
+                    </div>
+                    <div class="quantDiv">
+                        <button class="quantityButtons" id="decrement10">-</button>
+                        <span class="orderQuant" id="quantity10">0</span>
+                        <button class="quantityButtons" id="increment10">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </section>
+    </main>
+    <footer>
+        <div class="footerDiv">
+            <a href="https://www.facebook.com/taichouizakaya/">
+                <img src="https://i.ibb.co/ts1hnv1/Facebook-Line-White.png" alt="Facebook-Line-White" border="0">
+            </a>
+            <a href="https://instagram.com/taichou.izakaya">
+                <img src="https://i.ibb.co/12VVCqF/Insta-Line-White.png" alt="Insta-Line-White" border="0">
+            </a>
+        </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="orderText">Booking Details</h2>
+            <form id="bookingForm" action="https://formspree.io/f/xyyrpgvw" method="POST">
+                <div class="formProper">
+                    <label class="formItem" for="name">Name:</label>
+                    <input class="formFill" type="text" id="name" name="name" required><br><br>
+                </div>
+                <div class="formProper">
+                    <label label class="formItem" for="email">Email:</label>
+                    <input class="formFill" type="email" id="email" name="email" required><br><br>
+                </div>
+                <div class="formProper">
+                    <label label class="formItem" for="contact">Contact:</label>
+                    <input class="formFill" type="tel" id="contact" name="contact" required><br><br>
+                </div>
+                <div>
+                    <input type="hidden" id="orderDetails" name="orderDetails">
+
+                </div>
+                <h3 class="orderText">Order Summary</h3>
+                <ul class="orderBreakdown" id="orderSummaryModal"></ul>
+                <button type="submit" class="orderButton">Finalize Booking</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Function to update quantity and span text for increment
+        const incrementQuantity = (index) => {
+            const quantitySpan = document.getElementById(`quantity${index}`);
+            const quantity = parseInt(quantitySpan.textContent);
+            quantitySpan.textContent = quantity + 1;
+            updateOrderSummary();
+        };
+    
+        // Function to update quantity and span text for decrement
+        const decrementQuantity = (index) => {
+            const quantitySpan = document.getElementById(`quantity${index}`);
+            const quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 0) { // Fixed decrement condition
+                quantitySpan.textContent = quantity - 1;
+            }
+            updateOrderSummary();
+        };
+    
+        const updateOrderSummary = () => {
+    const orderSummaryList = document.getElementById('orderSummaryList');
+    orderSummaryList.innerHTML = ''; // Clear existing content
+    let totalPrice = 0; // Initialize total price
+    let orderDetails = []; // Initialize array to store order details
+
+    // Iterate over dish quantities
+    for (let i = 1; i <= 10; i++) {
+        const quantity = parseInt(document.getElementById(`quantity${i}`).textContent);
+        if (quantity > 0) {
+            const dishName = document.getElementsByTagName('h1')[i - 1].textContent;
+            const dishPrice = parseInt(document.getElementsByClassName('price')[i - 1].textContent);
+            const totalDishPrice = quantity * dishPrice; // Calculate total price for the dish
+            totalPrice += totalDishPrice; // Add to the total price
+            const listItem = document.createElement('li');
+            listItem.textContent = `${quantity} x ${dishName} = ${totalDishPrice}`;
+            orderSummaryList.appendChild(listItem);
+            // Add order details to the array
+            orderDetails.push({ name: dishName, quantity: quantity });
+        }
+    }
+
+    // Display total price at the end
+    const totalItem = document.createElement('li');
+    totalItem.textContent = `Total Price: ${totalPrice}`;
+    orderSummaryList.appendChild(totalItem);
+
+    // Set hidden input field value for order details
+    document.getElementById('orderDetails').value = JSON.stringify(orderDetails);
+};
+        // Event listeners for all increment buttons
+        document.querySelectorAll('.quantityButtons[id^="increment"]').forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                incrementQuantity(index + 1);
+            });
+        });
+    
+        // Event listeners for all decrement buttons
+        document.querySelectorAll('.quantityButtons[id^="decrement"]').forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                decrementQuantity(index + 1);
+            });
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get all buttons with the class "orderButton"
+        var buttons = document.getElementsByClassName('orderButton');
+
+        // Iterate through each button and attach event listener
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function() {
+                modal.style.display = "block";
+                updateOrderSummaryModal();
+            };
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        const updateOrderSummaryModal = () => {
+    const orderSummaryListModal = document.getElementById('orderSummaryModal');
+    orderSummaryListModal.innerHTML = ''; // Clear existing content
+    let totalPriceModal = 0; // Initialize total price
+
+    // Iterate over dish quantities
+    for (let i = 1; i <= 10; i++) {
+        const quantity = parseInt(document.getElementById(`quantity${i}`).textContent);
+        if (quantity > 0) {
+            const dishName = document.getElementsByTagName('h1')[i - 1].textContent;
+            const dishPrice = parseInt(document.getElementsByClassName('price')[i - 1].textContent);
+            const totalDishPrice = quantity * dishPrice; // Calculate total price for the dish
+            totalPriceModal += totalDishPrice; // Add to the total price
+            const listItem = document.createElement('li');
+            listItem.textContent = `${quantity} x ${dishName} = ${totalDishPrice}`;
+            orderSummaryListModal.appendChild(listItem);
+            
+        }
+    }
+
+    // Display total price at the end
+    const totalItem = document.createElement('li');
+    totalItem.textContent = `Total Price: ${totalPriceModal}`;
+    orderSummaryListModal.appendChild(totalItem);
+};
+    </script>
+    
+</body>
+</html>
